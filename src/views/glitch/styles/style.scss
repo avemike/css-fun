@@ -1,83 +1,67 @@
 @import 'vars.scss';
 @import 'animations.scss';
 
-* {
-    box-sizing: border-box;
-}
+.glitch-box {
+  justify-self: center;
+  align-self: center;
 
+  position: relative;
 
-body {
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
+  width: $image-width;
+  height: $image-height;
 
-    // center #app
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  overflow: hidden;
+  .text {
+      position: absolute;
+      left: 7%;
+      bottom: 20%;
+      opacity: 0;
 
-    // background appearance
-    background-color: #23001E;
-    .glitch-box {
-        position: relative;
+      font-size: 1.75rem;
+      // font-family: 'DancingVampyrish';
+      letter-spacing: 0.2em;
+  }
+  .glitched__img {
+      position: absolute;
 
-        width: $image-width;
-        height: $image-height;
+      top: -$gap-vertical;
+      left: -$gap-horizontal;
+      width: calc(100% + #{$gap-horizontal} * 2);
+      height: calc(100% + #{$gap-vertical} * 2);
+      background: url("https://picsum.photos/1920/1080") no-repeat 50% 0 / cover black;
+      background-blend-mode: normal;
 
-        overflow: hidden;
-        .text {
-            position: absolute;
-            left: 7%;
-            bottom: 20%;
-            opacity: 0;
+      @for $i from 2 through 5 {
+          &:nth-child(#{$i}) {
+              background-color: nth($colors, $i);
+              background-blend-mode: nth($blend, $i);
+          }
+      }
+      // all layers except first will be hidden by default
+      &:nth-child(n+2) {
+          opacity: 0;
 
-            font-size: 2.75em;
-            // font-family: 'DancingVampyrish';
-            letter-spacing: 0.2em;
-        }
-        .glitched__img {
-            position: absolute;
-
-            top: -$gap-vertical;
-            left: -$gap-horizontal;
-            width: calc(100% + #{$gap-horizontal} * 2);
-            height: calc(100% + #{$gap-vertical} * 2);
-            background: url("https://picsum.photos/1920/1080") no-repeat 50% 0 / cover black;
-            background-blend-mode: normal;
-
-            @for $i from 2 through 5 {
-                &:nth-child(#{$i}) {
-                    background-color: nth($colors, $i);
-                    background-blend-mode: nth($blend, $i);
-                }
-            }
-            // all layers except first will be hidden by default
-            &:nth-child(n+2) {
-                opacity: 0;
-
-            }
-            
-        }
-        &:hover {
-            // make text visible
-            .text {
-                opacity: 1;
-            }
-            // if hovered make all layers visible
-            .glitched__img:nth-child(n+2) {
-                opacity: 1;
-            }
-            // and then apply animations on all of them
-            @for $i from 2 through 4 {
-                .glitched__img:nth-child(#{$i}) {
-                    transform: translate3d( $gap-horizontal, 0, 0);
-                    animation: glitch-anim-#{$i}-horizontal 0.06 * random($limit: 10)+s linear 0s infinite alternate;
-                }
-            }
-            .glitched__img:nth-child(5) {
-                animation: glitch-anim-flash 0.5s steps(1,end) infinite;
-            }
-        }
-
-    }
+      }
+      
+  }
+  &:hover {
+      // make text visible
+      .text {
+          opacity: 1;
+      }
+      // if hovered make all layers visible
+      .glitched__img:nth-child(n+2) {
+          opacity: 1;
+      }
+      // and then apply animations on all of them
+      @for $i from 2 through 4 {
+          .glitched__img:nth-child(#{$i}) {
+              transform: translate3d( $gap-horizontal, 0, 0);
+              animation: glitch-anim-#{$i}-horizontal 0.06 * random($limit: 10)+s linear 0s infinite alternate;
+          }
+      }
+      .glitched__img:nth-child(5) {
+          animation: glitch-anim-flash 0.5s steps(1,end) infinite;
+      }
+  }
 }
