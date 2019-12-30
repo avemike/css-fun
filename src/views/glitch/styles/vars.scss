@@ -1,5 +1,5 @@
-$image-width: 100%;
-$image-height: 100%;
+$image-width: calc(100% - 1em);
+$image-height: calc(100% - 1em);
 $gap-vertical: 30px;
 $gap-horizontal: 40px;
 

@@ -1,0 +1,19 @@
+.panel {
+  // properties
+  width: 86%;
+  height: 84%;
+
+  // display
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // self placemenet
+  justify-self: center;
+  align-self: center;
+  
+  // appearance
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+
+}
