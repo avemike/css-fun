@@ -1,12 +1,22 @@
+$water-width: 606px;
+$water-height: 606px;
+
 .water-ball {
-  width: 606px;
-  height: 606px;
-  background: red;
+  width: $water-width;
+  height: $water-height;
+  // background: red;
   position: relative;
   border-radius: 50%;
-  overflow-x: hidden;
-  overflow-y: auto;
-
+  overflow: hidden;
+  .shine {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
   .water {
     position: absolute;
     bottom: 0;
@@ -15,6 +25,21 @@
       position: absolute;
       bottom: 0;
     }
+  }
+  .sun {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    img {
+      width: $water-width;
+      height: $water-height;
+    }
+  }
+  .clouds {
+    position: absolute;
+    top: $water-height/6;
+    left: 0;
   }
   .water-front {
     width: max-content;
