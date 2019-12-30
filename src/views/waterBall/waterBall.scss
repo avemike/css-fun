@@ -1,0 +1,27 @@
+.water-ball {
+  width: 606px;
+  height: 606px;
+  background: red;
+  position: relative;
+  border-radius: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .water {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    img {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .water-front {
+    width: max-content;
+    height: max-content;
+  }
+  .water-back {
+    width: max-content;
+    height: max-content;
+  }
+}

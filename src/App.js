@@ -5,8 +5,9 @@ import {
   Route
 } from "react-router-dom"
 
-import GlitchView  from './views/glitch'
 import Home  from './views/home'
+import GlitchView  from './views/glitch'
+import WaterBall from './views/waterBall';
 import { Navbar } from './components/navbar/Navbar'
 import './App.scss'
 
@@ -18,6 +19,7 @@ export const App = () => {
       <Switch>
         <Route exact path="/" children={<Home />} />
         <Route path="/Glitch_effect" children={<GlitchView />} />
+        <Route path="/Water_ball" children={<WaterBall />} />
       </Switch>
     </div>
     </Router>
