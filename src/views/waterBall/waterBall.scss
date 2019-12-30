@@ -1,5 +1,8 @@
+@import 'animations.scss';
+
 $water-width: 606px;
-$water-height: 606px;
+$water-height: $water-width;
+$water-duration: 2.2s;
 
 .water-ball {
   width: $water-width;
@@ -8,6 +11,13 @@ $water-height: 606px;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
+
+  .clouds, .water {
+    img {
+      width: 2 * $water-width;
+    }
+  }
+
   .shine {
     position: absolute;
     top: 0;
@@ -21,6 +31,16 @@ $water-height: 606px;
     position: absolute;
     bottom: 0;
     left: 0;
+    &.water-back {
+      left: -100%;
+      // animation: glitch-anim-flash 0.5s steps(1,end) 1.2s infinite;
+      // animation: .5s linear 1s infinite alternate slidein;
+      animation: $water-duration linear 0s infinite reverse moveForward;
+
+    }
+    &.water-front {
+      animation: $water-duration linear 0s infinite normal moveForward;
+    }
     img {
       position: absolute;
       bottom: 0;
@@ -40,13 +60,13 @@ $water-height: 606px;
     position: absolute;
     top: $water-height/6;
     left: 0;
-  }
-  .water-front {
-    width: max-content;
-    height: max-content;
-  }
-  .water-back {
-    width: max-content;
-    height: max-content;
+    &.clouds-back {
+      left: -100%;
+
+      animation: $water-duration linear 0s infinite reverse moveForward;
+    }
+    &.clouds-front {
+      animation: $water-duration linear 0s infinite normal moveForward;
+    }
   }
 }
