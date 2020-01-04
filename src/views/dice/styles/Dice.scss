@@ -1,0 +1,114 @@
+$wall-length: 220px;
+$horizontal-shift: $wall-length * 1.75;
+$vertical-shift: $wall-length * 1.5;
+
+$dice-corner-color: #ccc;
+$dice-color: #ddd;
+
+.dice-wrapper {
+  perspective: $wall-length*3.25;
+
+  width: $wall-length;
+  height: $wall-length;
+
+  position: relative;
+  right: - $horizontal-shift;
+  top: - $vertical-shift;
+}
+
+.dice {
+  position: absolute;
+
+  right: $horizontal-shift;
+  top: $vertical-shift;
+
+  width: $wall-length;
+  height: $wall-length;
+
+  .dice-wall {
+    position: absolute;
+
+    width: $wall-length;
+    height: $wall-length;
+
+    background-color: $dice-color;
+    border-radius: $wall-length/4;
+    border: 3px solid $dice-corner-color;
+
+
+    padding: $wall-length/15;
+    // grid is utilized by only four types of wall (exception 6 dot-wall -> is using flex)
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "ul . ur"
+      ". c ."
+      "bl . br";
+
+    &.top {
+      transform: rotateX(90deg) translateZ($wall-length / 2);
+    }
+    &.front {
+      transform: translateZ($wall-length / 2);
+    }
+    &.left {
+      transform: rotateY(-90deg)  translateZ($wall-length / 2);
+      background-color: $dice-corner-color;
+    }
+
+    &.right {
+      transform: rotateY(90deg)  translateZ($wall-length / 2);
+    }
+
+    &.bottom {
+      transform: rotateX(-90deg) translateZ($wall-length / 2);
+      background-color: $dice-corner-color;
+    }
+
+    &.back {
+      transform: rotateY(-180deg) translateZ($wall-length / 2);
+      background-color: $dice-corner-color;
+    }
+  }
+
+
+  // DOTS
+  .dot {
+    position: relative;
+
+    width: $wall-length / 5;
+    height: $wall-length / 5;
+    border-radius: 50%;
+
+    background-color: invert($dice-color);
+    align-self: center;
+    justify-self: center;
+    
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 30%;
+      bottom: 30%;
+
+      box-shadow: 0 0 4px 4px rgba(#fff, .36);
+    }
+
+    &.dot-center {
+      grid-area: c;
+    }
+    &.dot-upperLeft {
+      grid-area: ul;
+    }
+    &.dot-upperRight {
+      grid-area: ur;
+    }
+    &.dot-bottomLeft {
+      grid-area: bl;
+    }
+    &.dot-bottomRight {
+      grid-area: br;
+    }
+  }
+}

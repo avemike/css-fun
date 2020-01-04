@@ -17,6 +17,9 @@ export const Navbar = () => {
         <li>
           <Link to="/Water_ball">Water Ball Animation</Link>
         </li>
+        <li>
+          <Link to="/Dice">Dice</Link>
+        </li>
       </ul>
     </nav>
   )
