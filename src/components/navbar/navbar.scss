@@ -21,8 +21,10 @@ nav {
       text-align: center;
       a {
         display: block;
-        width: 100%;
+        width: 75%;
+        margin: 0 auto;
         padding: 12px;
+        user-select: none;
 
         // FONT
         color: #59656F;
