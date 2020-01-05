@@ -6,8 +6,7 @@ $dice-corner-color: #ccc;
 $dice-color: #ddd;
 
 .dice-wrapper {
-  perspective: $wall-length*3.25;
-
+  perspective: 1200px;
   width: $wall-length;
   height: $wall-length;
 

@@ -9,6 +9,7 @@ import Home  from './views/home'
 import GlitchView  from './views/glitch'
 import WaterBall from './views/waterBall';
 import Dice from './views/dice';
+import Landscape from './views/landscape';
 import { Navbar } from './components/navbar/Navbar'
 import './App.scss'
 
@@ -29,6 +30,9 @@ export const App = () => {
           </Route>
           <Route path="/Dice" >
             <Dice />
+          </Route>
+          <Route path="/Landscape" >
+            <Landscape />
           </Route>
         </Switch>
       </div>

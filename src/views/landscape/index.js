@@ -1,0 +1,1 @@
+export { LandscapeView as default } from './LandscapeView'
