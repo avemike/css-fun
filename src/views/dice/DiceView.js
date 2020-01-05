@@ -5,7 +5,7 @@ import { Dice } from './components/Dice'
 
 export const DiceView = () => {
   return (
-    <Panel>
+    <Panel title="Dice model 3D">
       <Dice />
     </Panel>
   )
