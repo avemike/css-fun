@@ -1,6 +1,7 @@
 import React from 'react'
 import {
-  Link
+  NavLink,
+  useRouteMatch
 } from "react-router-dom"
 import './navbar.scss'
 
@@ -9,19 +10,19 @@ export const Navbar = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" exact>Home</NavLink>
         </li>
         <li>
-          <Link to="/Glitch_effect">Glitch Effect</Link>
+          <NavLink to="/Glitch_effect">Glitch Effect</NavLink>
         </li>
         <li>
-          <Link to="/Water_ball">Water Ball Animation</Link>
+          <NavLink to="/Water_ball">Water Ball Animation</NavLink>
         </li>
         <li>
-          <Link to="/Dice">Dice</Link>
+          <NavLink to="/Dice">Dice</NavLink>
         </li>
         <li>
-          <Link to="/Landscape">Landscape</Link>
+          <NavLink to="/Landscape">Landscape</NavLink>
         </li>
       </ul>
     </nav>
