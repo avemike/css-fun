@@ -3,6 +3,9 @@ $wheel-size: $car-length * 0.27;
 $car-color: rgb(random(200), random(200), random(200));
 
 .car {
+  position: absolute;
+  left: 0;
+  top: 0;
   .car-body {
     // main, bigger circle of car body
     position: relative;

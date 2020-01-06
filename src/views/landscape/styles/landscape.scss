@@ -1,8 +1,0 @@
-.landscape-view {
-  // loop through surfaces
-  @for $i from 1 through 4 {
-    &:nth-child(#{$i}) {
-      
-    }
-  }
-}
