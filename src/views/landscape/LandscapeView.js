@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/landscape.scss'
 import Panel from '../../components/showcasePanel';
+import { Street } from './components/Street';
 
 export const LandscapeView = () => {
   return (
@@ -10,8 +11,8 @@ export const LandscapeView = () => {
         <div className="surface"></div>
         <div className="surface"></div>
         <div className="surface">
-          <div className="car"></div>
-        </div>   
+          <Street/>
+        </div>
       </div>
     </Panel>
   )

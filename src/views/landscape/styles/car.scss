@@ -1,0 +1,69 @@
+$car-length: 80px;
+$wheel-size: $car-length * 0.27;
+$car-color: rgb(random(200), random(200), random(200));
+
+.car {
+  .car-body {
+    // main, bigger circle of car body
+    position: relative;
+    
+    width: $car-length;
+    height: $car-length/2;
+
+    border-radius: $car-length $car-length 0 8px;
+    background-color: $car-color;
+
+    // clip-path: polygon(0% 0%, 150% 0%, 150% 50%, 0% 50%);
+    
+    .wheel {
+      position: absolute;
+      bottom: - $wheel-size / 2;
+
+      width: $wheel-size;
+      height: $wheel-size;
+
+      border: $car-length/20 solid black;
+      border-radius: 50%;
+      background: silver;
+      &.wheel-left { left: 15%;}
+      &.wheel-right { right: -4%;}
+    }
+    .windows {
+      position: absolute;
+      left: 18%;
+      top: 8%;
+
+      width: 64%;
+      height: 64%;
+
+      border-radius: 50%;
+      background-color: lightblue;
+
+      clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+      &::before {
+        content: '';
+        position: absolute;
+        left: 42%;
+        top: 0;
+        height: 100%;
+        width: 4%;
+
+        background-color: $car-color;
+      }
+    }
+
+    &::before {
+      // second, smaller circle of car body
+      content: '';
+
+      position: absolute;
+      right: -20%;
+      bottom: 0;
+
+      width: 60%;
+      height: 60%;
+      border-radius: 0 $car-length*.65 8px 0;
+      background-color: $car-color;
+    }
+  }
+}
