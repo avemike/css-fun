@@ -1,9 +1,11 @@
 import React from 'react'
 import '../styles/car.scss'
 
-export const Car = () => {
+export const Car = props => {
+  const { direction } = props
+
   return (
-    <div className="car">
+    <div className={`car car-${direction}`}>
       <div className="car-body">
         <div className="wheel wheel-left"></div>
         <div className="wheel wheel-right"></div>

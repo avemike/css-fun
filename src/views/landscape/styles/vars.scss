@@ -1,0 +1,15 @@
+// STREET
+$street-width: 840px;
+$street-height: $street-width / 8;
+$street-marking-line-width: $street-width / 30;
+
+// CAR
+$car-length: 80px;
+$wheel-size: $car-length * 0.27;
+$car-color: rgb(random(200), random(200), random(200));
+
+// LANTERN
+$lantern-height: 100px;
+$lantern-width: $lantern-height / 15;
+$lantern-horizontal-pipe-width: $lantern-height / 3;
+$lantern-color: #444;

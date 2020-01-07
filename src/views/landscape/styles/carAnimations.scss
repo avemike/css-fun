@@ -1,0 +1,12 @@
+@keyframes carAnimLeft {
+  0% {
+    // transform: translateX(0);
+
+    right: - $car-length * 2;
+  }
+  100% {
+    // transform: translateX( -($street-width + $car-length * 2) );
+
+    right: calc(100% + #{$car-length * 2});
+  }
+}

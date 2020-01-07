@@ -1,11 +1,22 @@
-$car-length: 80px;
-$wheel-size: $car-length * 0.27;
-$car-color: rgb(random(200), random(200), random(200));
+@import './vars.scss';
+@import './carAnimations.scss';
 
 .car {
   position: absolute;
-  left: 0;
-  top: 0;
+
+
+  &.car-left {
+    top: - $street-height / 4;
+    right: - $car-length * 2;
+    transform: rotateY(180deg);
+    animation: 4s linear 0s infinite normal carAnimLeft;
+  }
+
+  &.car-right {
+    bottom: $street-height / 4;
+    right: -($street-width + $car-length * 2);
+    animation: 4s linear 0s infinite reverse carAnimLeft;
+  }
   .car-body {
     // main, bigger circle of car body
     position: relative;
@@ -16,8 +27,6 @@ $car-color: rgb(random(200), random(200), random(200));
     border-radius: $car-length $car-length 0 8px;
     background-color: $car-color;
 
-    // clip-path: polygon(0% 0%, 150% 0%, 150% 50%, 0% 50%);
-    
     .wheel {
       position: absolute;
       bottom: - $wheel-size / 2;
