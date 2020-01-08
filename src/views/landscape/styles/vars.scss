@@ -13,3 +13,10 @@ $lantern-height: 100px;
 $lantern-width: $lantern-height / 15;
 $lantern-horizontal-pipe-width: $lantern-height / 3;
 $lantern-color: #444;
+
+// TREES
+$trunk-color: brown;
+$leaves-color: green;
+$trunk-width: 15px;
+$trunk-height: $trunk-width * 7;
+$leaves-length: $trunk-width * 4;

@@ -1,12 +1,28 @@
 import React from 'react'
+
 import { Car } from './Car'
 import { Lantern } from './Lantern'
+import { Tree } from './Tree';
+
 import '../styles/street.scss'
 
 export const Street = () => {
 
+  const generateTrees = (n) => {
+    const treesArray = []
+    for (let i = 0; i < n; i++) {
+      treesArray.push(
+        <Tree order={ i+1 }/>
+      )
+    }
+    return treesArray
+  }
+
   return (
     <div className="street">
+      <div className="trees">
+        { generateTrees(19) }
+      </div>
       <div className="lanterns">
         <Lantern />
         <Lantern />

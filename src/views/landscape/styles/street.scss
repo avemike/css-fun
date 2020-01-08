@@ -36,4 +36,15 @@
     justify-content: space-around;
     align-items: flex-end;
   }
+  .trees {
+    position: absolute;
+    top: - $trunk-height;
+    left: 0;
+    
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+
+    width: 100%;
+  }
 }
