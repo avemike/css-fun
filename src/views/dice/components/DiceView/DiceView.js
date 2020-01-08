@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Panel from '../../components/showcasePanel';
-import { Dice } from './components/Dice'
+import Panel from '../../../../components/showcasePanel';
+import { Dice } from '../Dice'
 
 export const DiceView = () => {
   return (

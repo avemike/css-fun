@@ -1,6 +1,6 @@
 import React from 'react';
-import Panel from '../../../components/showcasePanel';
-import '../styles/style.scss';
+import Panel from '../../../../components/showcasePanel';
+import './style.scss';
 
 export const GlitchBox = () => {
   return (

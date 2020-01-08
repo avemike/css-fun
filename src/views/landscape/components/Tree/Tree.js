@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../styles/tree.scss'
+import './tree.scss'
 
 export const Tree = props => {
   return (

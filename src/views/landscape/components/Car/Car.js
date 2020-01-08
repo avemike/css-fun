@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/car.scss'
+import './car.scss'
 
 export const Car = props => {
   const { direction } = props

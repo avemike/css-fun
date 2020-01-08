@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Dice.scss';
+import './Dice.scss';
 
 export const Dice = () => {
   return (

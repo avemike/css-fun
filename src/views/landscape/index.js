@@ -1,1 +1,1 @@
-export { LandscapeView as default } from './LandscapeView'
+export { Landscape as default } from './components/Landscape'

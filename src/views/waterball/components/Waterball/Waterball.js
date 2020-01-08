@@ -1,8 +1,8 @@
 import React from 'react'
-import Panel from '../../components/showcasePanel'
-import './waterBall.scss'
+import Panel from '../../../../components/showcasePanel'
+import './waterball.scss'
 
-export const WaterBall = () => {
+export const Waterball = () => {
   return (
     <Panel title="Water Ball Animation">
       <div className="water-ball">

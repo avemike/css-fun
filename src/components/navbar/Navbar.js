@@ -1,7 +1,6 @@
 import React from 'react'
 import {
-  NavLink,
-  useRouteMatch
+  NavLink
 } from "react-router-dom"
 import './navbar.scss'
 

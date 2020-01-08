@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Car } from './Car'
-import { Lantern } from './Lantern'
-import { Tree } from './Tree';
+import { Car } from '../Car'
+import { Lantern } from '../Lantern'
+import { Tree } from '../Tree';
 
-import '../styles/street.scss'
+import './street.scss'
 
 export const Street = () => {
 
@@ -21,7 +21,7 @@ export const Street = () => {
   return (
     <div className="street">
       <div className="trees">
-        { generateTrees(19) }
+        { generateTrees(9) }
       </div>
       <div className="lanterns">
         <Lantern />

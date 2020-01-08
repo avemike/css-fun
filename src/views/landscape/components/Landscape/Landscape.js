@@ -1,12 +1,14 @@
 import React from 'react';
-import './styles/landscape.scss'
-import Panel from '../../components/showcasePanel';
-import { Street } from './components/Street';
 
-export const LandscapeView = () => {
+import './landscape.scss'
+
+import Panel from '../../../../components/showcasePanel';
+import { Street } from '../Street';
+
+export const Landscape = () => {
   return (
     <Panel title="City Landscape">
-      <div className="landscape-view">
+      <div className="landscape">
         {/* First surface is background, last is foreground*/}
         <div className="surface"></div>
         <div className="surface"></div>

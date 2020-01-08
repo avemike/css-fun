@@ -1,3 +1,1 @@
-import { GlitchBox } from './components/GlitchBox'
-
-export default GlitchBox
+export { GlitchBox as default } from './components/GlitchBox'

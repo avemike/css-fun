@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/lantern.scss'
+import './lantern.scss'
 
 export const Lantern = () => {
   return (

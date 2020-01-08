@@ -7,7 +7,7 @@ import {
 
 import Home  from './views/home'
 import GlitchView  from './views/glitch'
-import WaterBall from './views/waterBall';
+import Waterball from './views/waterball';
 import Dice from './views/dice';
 import Landscape from './views/landscape';
 import { Navbar } from './components/navbar/Navbar'
@@ -26,7 +26,7 @@ export const App = () => {
             <GlitchView />
           </Route>
           <Route path="/Water_ball" >
-            <WaterBall />
+            <Waterball />
           </Route>
           <Route path="/Dice" >
             <Dice />
