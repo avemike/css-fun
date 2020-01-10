@@ -8,6 +8,7 @@
 
   border-radius: $street-width / 20;
   background-color: gray;
+  
   .street-marking-group {
     position: absolute;
     top: 0;
@@ -44,6 +45,15 @@
     display: flex;
     justify-content: space-around;
     align-content: flex-end;
+
+    width: 100%;
+  }
+  .houses {
+    position: absolute;
+    top: -$lower-body-height;
+
+    display: flex;
+    justify-content: space-around;
 
     width: 100%;
   }

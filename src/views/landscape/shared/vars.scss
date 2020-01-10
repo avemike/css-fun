@@ -20,3 +20,15 @@ $leaves-color: green;
 $trunk-width: 15px;
 $trunk-height: $trunk-width * 7;
 $leaves-length: $trunk-width * 4;
+
+// HOUSE
+$lower-body-width: 160px;
+$lower-body-height: $lower-body-width * 0.8;
+$upper-body-height: $lower-body-width * 0.5;
+
+$house-primary-color: #673C4F;
+$house-second-color: #7F557D;
+$window-color: #3F88C5;
+$house-border-color: #3F4045;
+
+$house-border: 2px solid rgba($house-border-color, 1);
