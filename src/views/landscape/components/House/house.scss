@@ -40,12 +40,15 @@
   }
   .roof {
     $roof-height: $upper-body-height / 7;
-    $roof-width: $lower-body-width * 1.41421356237 *.5; 
+    $roof-width: $lower-body-width * 1.41421356237 / 2 + 2*$roof-height; 
     .roof-element {
       border: $house-border;
 
       position: absolute;
-      top: -($roof-height + $upper-body-height) / 2;
+      // top: -($roof-height + $upper-body-height) / 2;
+
+      top: -$upper-body-height - $roof-height/2;
+      left: $lower-body-width/2 - $roof-width/2;
 
       width: $roof-width;
       height: $roof-height;
@@ -54,14 +57,30 @@
     }
     // $shift: $roof-height * 1.41421356237 / 2;
     .left {
-      left: $lower-body-width/4 - $roof-width / 2;
-      transform: rotateZ(-45deg) scale( $roof-height/$roof-width*2 + 1, 1);
+      // left: $lower-body-width/4 - $roof-width / 2;
+      // transform: rotateZ(-45deg) scale( $roof-height/$roof-width*2 + 1, 1);
+      transform: rotateZ(-45deg) translateX(-50%);
     }
     .right {
-      right: $lower-body-width/4 - $roof-width / 2;
-      transform: rotateZ(45deg) scale( $roof-height/$roof-width*2 + 1, 1);
+      // right: $lower-body-width/4 - $roof-width / 2;
+      // transform: rotateZ(45deg) scale( $roof-height/$roof-width*2 + 1, 1);
+      transform: rotateZ(45deg) translateX(50%);
+    }
+    .roof-apex {
+      position: absolute;
+      top: -$upper-body-height - $roof-height/2;
+      left: $lower-body-width/2 - $roof-height/2;
+      border: $house-border;
+      border-bottom: none;
+      border-right: none;
+
+      transform: rotate(45deg);
+      width: $roof-height;
+      height: $roof-height;
+      background: $house-primary-color;
     }
   }
+
   $window-length: $lower-body-width * .23; 
   .window {
     position: relative;

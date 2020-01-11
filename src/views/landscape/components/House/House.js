@@ -30,6 +30,7 @@ export const House = () => {
       <div className="roof">
         <div className="roof-element left"></div>
         <div className="roof-element right"></div>
+        <div className="roof-apex"></div>
       </div>
     </div>
   )

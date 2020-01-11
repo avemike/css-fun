@@ -28,7 +28,7 @@ export const Street = () => {
         <House />
       </div>
       <div className="trees">
-        { generateTrees(13) }
+        { generateTrees(11) }
       </div>
       <div className="lanterns">
         <Lantern />
