@@ -1,0 +1,23 @@
+@import '../../shared/vars.scss';
+
+.mountain {
+  position: absolute;
+  bottom: 0;
+
+  width: $mountain-width;
+  height: $mountain-height;
+
+  border-radius: 50%;
+
+  transform: translateY(50%);  
+  background: darkgray;
+  border: 2px solid #222;
+  &.mountain-1 {
+    left: 0;
+  }
+  &.mountain-2 {
+    right: 0;
+    width: calc(#{$mountain-width} + 10%);
+    height: calc(#{$mountain-height} + 20%);
+  }
+}
