@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+@import './globalVars.scss';
+
 * {
   box-sizing: border-box;
 }
@@ -18,5 +21,5 @@ body {
   display: grid;
   grid-template-columns: 1fr 6fr;
 
-  background-color: #D7CDCC;
+  background-color: $fifth-color;
 }
