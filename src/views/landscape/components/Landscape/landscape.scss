@@ -14,6 +14,20 @@
 
     width: 100%;
     height: 100%;
+    .sky {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba(blue, .37);
+
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
   }
   &::after {
     // creates a fog

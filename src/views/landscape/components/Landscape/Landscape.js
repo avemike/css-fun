@@ -5,6 +5,7 @@ import './landscape.scss'
 import Panel from '../../../../components/showcasePanel';
 import { Street } from '../Street';
 import { Mountain } from '../Mountain';
+import { Cloud } from '../Cloud';
 
 export const Landscape = () => {
   const generateMountains = (n) => {
@@ -20,6 +21,10 @@ export const Landscape = () => {
       <div className="landscape">
         {/* First surface is background, last is foreground*/}
         <div className="background">
+          <div className="sky">
+            <Cloud />
+            <Cloud />
+          </div>
           { generateMountains(2) }
         </div>
         <div className="foreground">
