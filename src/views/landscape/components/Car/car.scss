@@ -14,7 +14,7 @@
 
   &.car-right {
     bottom: $street-height / 4;
-    right: -($street-width + $car-length * 2);
+    right: -calc(#{$street-width} + #{$car-length} * 2);
     animation: 5s linear 1s infinite reverse carAnimLeft;
   }
   .car-body {
