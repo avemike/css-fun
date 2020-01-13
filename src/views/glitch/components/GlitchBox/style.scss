@@ -29,7 +29,7 @@
       left: -$gap-horizontal;
       width: calc(100% + #{$gap-horizontal} * 2);
       height: calc(100% + #{$gap-vertical} * 2);
-      background: url("https://picsum.photos/1920/1080") no-repeat 50% 0 / cover black;
+      background: url("/img/glitch/img.jpg") no-repeat 50% 0 / cover black;
       background-blend-mode: normal;
 
       @for $i from 2 through 5 {
@@ -58,11 +58,11 @@
       @for $i from 2 through 4 {
           .glitched__img:nth-child(#{$i}) {
               transform: translate3d( $gap-horizontal, 0, 0);
-              animation: glitch-anim-#{$i}-horizontal 0.06 * random($limit: 10)+s linear 1.2s infinite alternate;
+              animation: glitch-anim-#{$i}-horizontal 0.06 * random($limit: 10)+s linear 0s infinite alternate;
           }
       }
       .glitched__img:nth-child(5) {
-          animation: glitch-anim-flash 0.5s steps(1,end) 1.2s infinite;
+          animation: glitch-anim-flash 0.5s steps(1,end) 0s infinite;
       }
   }
 }

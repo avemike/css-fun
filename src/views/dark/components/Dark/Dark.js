@@ -4,7 +4,7 @@ import './dark.scss'
 
 export const Dark = () => {
   return (
-    <Panel>
+    <Panel title="Darkness and a flashlight">
       <div className="dark">
         <div className="image"></div>
         <div className="filter"></div>
