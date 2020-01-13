@@ -1,0 +1,46 @@
+.landscape {
+  position: relative;
+  width: 90%;
+  height: 90%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  .background {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    .sky {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba(blue, .37);
+
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+  }
+  &::after {
+    // creates a fog
+    content: '';
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(9,9,121,0) 20%, rgba(2,164,223,0) 80%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 100%);   
+  }
+}

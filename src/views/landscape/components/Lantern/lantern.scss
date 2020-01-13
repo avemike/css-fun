@@ -1,0 +1,53 @@
+@import '../../shared/vars.scss';
+
+.lantern {
+  position: relative;
+  .long-vertical-pipe {
+    height: $lantern-height;
+    width: $lantern-width;
+    background: $lantern-color;
+  }
+  .horizontal-pipe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: $lantern-horizontal-pipe-width;
+    height: $lantern-width;
+
+    background: $lantern-color;
+  }
+  .short-vertical-pipe {
+    position: absolute;
+    top: 0;
+    left: $lantern-horizontal-pipe-width;
+
+    width: $lantern-width;
+    height: $lantern-height / 4;
+
+    background: $lantern-color;
+  }
+  .lightbulb {
+    position: absolute;
+    top: $lantern-height / 4 - $lantern-height/9;
+    left: $lantern-horizontal-pipe-width + $lantern-width - ($lantern-width + $lantern-height/4.5)/2;
+
+    width: $lantern-height/4.5;
+    height: $lantern-height/4.5;
+
+    border-radius: 50%;
+    background: yellow;
+    .lightbulb-light {
+      
+      width: 100%;
+      height: 100%;
+      transform: scale(2.75);
+      border-radius: 50%;
+
+      background: rgb(245,255,0);
+      background: radial-gradient(circle, rgba(245,255,0,1) 0%, rgba(246,255,40,0.24) 40%, rgba(255,255,255,0) 100%);
+
+    }
+  }
+
+}

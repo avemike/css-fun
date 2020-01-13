@@ -1,0 +1,1 @@
+export { GlitchBox as default } from './components/GlitchBox'

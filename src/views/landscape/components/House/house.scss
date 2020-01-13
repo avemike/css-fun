@@ -1,0 +1,142 @@
+@import '../../shared/vars.scss';
+
+.house {
+  position: relative;
+  .lower-body {
+    overflow: hidden;
+
+    width: $lower-body-width;
+    height: $lower-body-height;
+    background-color: $house-second-color;
+
+    padding: 0 $lower-body-width * 0.12;
+
+    display: flex;
+    flex-flow: row-reverse wrap;
+    
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    padding-top: $lower-body-height * .05; //making windows lower located
+    border: $house-border;
+    border-top: none;
+  }
+  .upper-body {
+    position: absolute;
+    top: -$upper-body-height;
+
+    width: $lower-body-width;
+    height: $upper-body-height;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: $upper-body-height * 0.25;
+    border-bottom: $house-border;
+
+    background: $house-primary-color;
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+  }
+  .roof {
+    $roof-height: $upper-body-height / 7;
+    $roof-width: $lower-body-width * 1.41421356237 / 2 + 2*$roof-height; 
+    .roof-element {
+      border: $house-border;
+
+      position: absolute;
+      // top: -($roof-height + $upper-body-height) / 2;
+
+      top: -$upper-body-height - $roof-height/2;
+      left: $lower-body-width/2 - $roof-width/2;
+
+      width: $roof-width;
+      height: $roof-height;
+
+      background: $house-primary-color;
+    }
+    // $shift: $roof-height * 1.41421356237 / 2;
+    .left {
+      // left: $lower-body-width/4 - $roof-width / 2;
+      // transform: rotateZ(-45deg) scale( $roof-height/$roof-width*2 + 1, 1);
+      transform: rotateZ(-45deg) translateX(-50%);
+    }
+    .right {
+      // right: $lower-body-width/4 - $roof-width / 2;
+      // transform: rotateZ(45deg) scale( $roof-height/$roof-width*2 + 1, 1);
+      transform: rotateZ(45deg) translateX(50%);
+    }
+    .roof-apex {
+      position: absolute;
+      top: -$upper-body-height - $roof-height/2;
+      left: $lower-body-width/2 - $roof-height/2;
+      border: $house-border;
+      border-bottom: none;
+      border-right: none;
+
+      transform: rotate(45deg);
+      width: $roof-height;
+      height: $roof-height;
+      background: $house-primary-color;
+    }
+  }
+
+  $window-length: $lower-body-width * .23; 
+  .window {
+    position: relative;
+    flex-shrink: 0;
+    margin: $lower-body-width * .05;
+    width: $window-length;
+    height: $window-length;
+
+    border: $house-border;
+
+    background: $window-color;
+    &.window-rounded {
+      transform: scale(0.85);
+      border-radius: 50%;
+    }
+    .line {
+      position: absolute;
+      left: 0;
+      top: calc(50% - 1.5px);
+
+      width: $window-length - 4px; //minus border size
+      height: 3px;
+
+      background: $house-border-color;
+      &.horizontal-line {
+        transform: rotate(90deg);
+
+      }
+    }
+  }
+  .door {
+    position: relative;
+
+    margin: $lower-body-width * .05;
+
+    width: $window-length;
+    height: $lower-body-height * .4;
+
+    background: $house-primary-color;
+
+    border-top: $house-border;
+    border-left: $house-border;
+    border-right: $house-border;
+    
+    transform: scaleY(1.2) translateY(20%);
+    .handle {
+      position: absolute;
+      left: 15%;
+      bottom: 50%;
+
+      width: 4px;
+      height: 4px;
+
+      border-radius: 50%;
+
+      background: $house-border-color;
+    }
+  }
+}

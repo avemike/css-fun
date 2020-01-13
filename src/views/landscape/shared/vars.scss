@@ -1,0 +1,38 @@
+// STREET
+$street-width: 60vw;
+$street-height: $street-width / 10;
+$street-marking-line-width: $street-width / 30;
+
+// CAR
+$car-length: 80px;
+$wheel-size: $car-length * 0.27;
+$car-color: rgb(random(200), random(200), random(200));
+
+// LANTERN
+$lantern-height: 100px;
+$lantern-width: $lantern-height / 15;
+$lantern-horizontal-pipe-width: $lantern-height / 3;
+$lantern-color: #444;
+
+// TREES
+$trunk-color: #704E3F;
+$leaves-color: #818B46;
+$trunk-width: 15px;
+$trunk-height: $trunk-width * 7;
+$leaves-length: $trunk-width * 4;
+
+// HOUSES
+$lower-body-width: 160px;
+$lower-body-height: $lower-body-width * 0.8;
+$upper-body-height: $lower-body-width * 0.5;
+
+$house-primary-color: #673C4F;
+$house-second-color: #7F557D;
+$window-color: #3F88C5;
+$house-border-color: #3F4045;
+
+$house-border: 2px solid rgba($house-border-color, 1);
+
+// MOUNTAINS
+$mountain-width: 60%;
+$mountain-height: 120%;

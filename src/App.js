@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
 
-function App() {
+import Home  from './views/home'
+import GlitchView  from './views/glitch'
+import Waterball from './views/waterball';
+import Dice from './views/dice';
+import Dark from './views/dark';
+import Landscape from './views/landscape';
+import { Navbar } from './components/navbar/Navbar'
+import './App.scss'
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <Navbar />
+        <Switch>
+          <Route exact path="/"> 
+            <Home />
+          </Route>
+          <Route path="/Glitch_effect">
+            <GlitchView />
+          </Route>
+          <Route path="/Water_ball" >
+            <Waterball />
+          </Route>
+          <Route path="/Dice" >
+            <Dice />
+          </Route>
+          <Route path="/Landscape" >
+            <Landscape />
+          </Route>
+          <Route path="/Dark" >
+            <Dark />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;

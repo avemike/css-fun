@@ -1,0 +1,1 @@
+export { Landscape as default } from './components/Landscape'

@@ -1,0 +1,60 @@
+@import '../../shared/vars.scss';
+
+.street {
+  position: relative;
+
+  width: $street-width;
+  height: $street-height;
+
+  border-radius: $street-width / 20;
+  background-color: gray;
+  
+  .street-marking-group {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    .street-line {
+      width: $street-marking-line-width;
+      height: $street-marking-line-width * 0.2;
+      background-color: white;
+    }
+  }
+  .lanterns {
+    position: absolute;
+    top: - $lantern-height;
+
+    width: 100%;
+    height: $lantern-height;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .trees {
+    position: absolute;
+    top: - $trunk-height;
+    left: 0;
+    
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+
+    width: 100%;
+  }
+  .houses {
+    position: absolute;
+    top: -$lower-body-height;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+  }
+}

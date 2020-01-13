@@ -1,0 +1,34 @@
+@import '../../shared/vars.scss';
+
+.tree {
+  position: relative;
+  .leaves {
+    position: absolute;
+    top: - $leaves-length / 2;
+    left: - ($leaves-length - $trunk-width) / 2;
+
+    width: $leaves-length;
+    height: $leaves-length;
+
+    border-radius: 50%;
+    background: $leaves-color;
+  }
+  .trunk {
+    width: $trunk-width;
+    height: $trunk-height;
+
+    background: $trunk-color;
+  }
+  // Adds variety in sizes of trees
+  @for $i from 1 to 12 {
+    &.tree-#{$i} {
+      $factor: random(7)/10 + 0.7;
+      .leaves {
+        transform: scale( $factor );
+      }
+      .trunk {
+        transform: scaleX( $factor );
+      }
+    }
+  }
+}

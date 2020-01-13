@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+@import './globalVars.scss';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  // GRID
+  // left column for nav, right for content
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+
+  background-color: $fifth-color;
+}
