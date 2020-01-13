@@ -1,0 +1,1 @@
+export { Dark as default } from './components/Dark'

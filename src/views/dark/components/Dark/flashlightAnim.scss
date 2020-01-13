@@ -1,0 +1,27 @@
+@keyframes animateY {
+  0% {
+
+  }
+  25% {
+    transform: translateY(-10%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+  100% {
+  }
+}
+
+@keyframes animateX {
+  0% {
+
+  }
+  25% {
+    transform: translateX(-15%);
+  }
+  75% {
+    transform: translateX(15%);
+  }
+  100% {
+  }
+}

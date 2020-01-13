@@ -23,6 +23,9 @@ export const Navbar = () => {
         <li>
           <NavLink to="/Landscape">Landscape</NavLink>
         </li>
+        <li>
+          <NavLink to="/Dark">Darkness</NavLink>
+        </li>
       </ul>
     </nav>
   )
